@@ -15,8 +15,8 @@ google.load('visualization', '1', {
 var visualization;
 
 function drawVisualization() {
-    var query = new google.visualization.Query('https://spreadsheets.google.com/tq?key=1FnpEQ1YHU76Qb3TE8rteZXTPHK8fCLzAK3S6ePDcOfY&output=htmlgid=109850835&usp=sharing');
-    query.setQuery('SELECT A, B, C, D, E label A "Duration", B "Song", C "Requested By", D "URL", E "MVP"');
+    var query = new google.visualization.Query('https://spreadsheets.google.com/tq?key=1FnpEQ1YHU76Qb3TE8rteZXTPHK8fCLzAK3S6ePDcOfY&output=html&gid=109850835&usp=sharing');
+    query.setQuery('SELECT A, B, C, D, E order by A desc label A "Rank", B "Team", C "Owner", D "Total", E "MVP"');
     query.send(handleQueryResponse);
 }
 
